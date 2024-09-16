@@ -11,8 +11,13 @@ var altura = 10; //inteiro
 var nota1 = 8; //inteiro
 var nota2 = 6; //inteiro
 var nota3 = 7.5; //floats
-var produto = 100 // inteiro
-var salariobruto = 4300 //inteiro 
+var produto = 100; // inteiro
+var salariobruto = 4300; //inteiro 
+var reais = 1000; //inteiro
+var taxacambio = 5.75; //floats
+var celsius = 28; //inteiro
+var peso = 60; //inteiro
+var alturaPessoa = 1.60 //floats
 
 //console.log("Olá, meu nome é " + [nome] + ", tenho " + [idade] + " anos, e sou de " + [cidade] + ".");
 
@@ -36,10 +41,10 @@ media = (nota1 + nota2 + nota3)/3;
 
 //if (media > 7) {
     //console.log("O resultado da média é: " + [media] + ", Aluno aprovado!");
-//}
+//} else {
+//  console.log("O resultado da média é: " + [media] + ",aluno reprovado!")
+//} 
 
-//else 
-//console.log("O resultado da média é: " + [media] + ",aluno reprovado!")
 
 //Desconto
 
@@ -58,4 +63,26 @@ resto = salariobruto - deducao;
 
 
 //Conversor de moedas
+
+dolar = Math.floor(reais/taxacambio);
+
+//console.log("A conversão da taxa de câmbio resulta em: " + [dolar] + " doláres.");
+
+//Conversor celsius p/ fahrenheit
+
+fahrenheit = Math.floor((celsius * 9/5) + 32);
+
+//console.log("A conversão de celsius para fahrenheit resulta em: " + [fahrenheit] + "°");
+
+//Calculadora IMC (índice de massa corporal)
+
+imc = peso / (alturaPessoa * alturaPessoa).toFixed(2);
+
+if (imc > 18.5 && imc < 24.9) {
+    console.log(imc + " O seu IMC está classificado como: normal");
+} else if (imc < 18.5) {
+    console.log(imc + " O seu IMC está classificado como: magreza");    
+} else {
+    console.log(imc + " O seu IMC está classificado como: obeso");
+}
 
